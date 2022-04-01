@@ -15,6 +15,9 @@
     <type name="Magento\Theme\Block\Html\Footer">
         <plugin name="afterFooterPlugin" type="Hummingbird\Module\Plugin\Magento\Theme\Block\Html\AfterFooterPlugin" sortOrder="2" disabled="false" />
     </type>
+    <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="afterHeaderPlugin" type="Hummingbird\Module\Plugin\Magento\Theme\Block\Html\AfterHeaderPlugin" sortOrder="2" disabled="false" />
+    </type>
     <type name="Magento\Theme\Block\Html\Breadcrumbs">
         <plugin name="beforeBreadcrumbsPlugin" type="Hummingbird\Module\Plugin\Magento\Theme\Block\Html\BeforeBreadcrumbsPlugin" sortOrder="4" disabled="false" />
     </type>

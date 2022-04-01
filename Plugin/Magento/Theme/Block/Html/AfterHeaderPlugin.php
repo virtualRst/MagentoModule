@@ -12,19 +12,15 @@ use Magento\Framework\View\Element\Template;
 /**
 * Class AfterFooterPlugin
 */
-class AfterFooterPlugin
+class AfterHeaderPlugin
 {
 /**
-* @param \Magento\Theme\Block\Html\Footer $subject
+* @param \Magento\Theme\Block\Html\Header $subject
 * @param $result
 * @return string
 */
-public function afterGetCopyright(\Magento\Theme\Block\Html\Footer $subject, $result)
-{
-return 'Customized copyright!';
-}
 public function afterGetWelcome(\Magento\Theme\Block\Html\Header $subject, $result)
 {
-return $result.' abc';
+return 'Custom Message';
 }
 }
