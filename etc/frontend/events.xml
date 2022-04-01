@@ -3,4 +3,7 @@
     <event name="catalog_controller_product_view">
         <observer name="module_test" instance="Hummingbird\Module\Observer\Log" shared="false" />
     </event>
+    <event name="controller_front_init_before">
+        <observer name="module_test" instance="Hummingbird\Module\Observer\Log2" shared="false" />
+    </event>
 </config>
