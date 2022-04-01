@@ -1,12 +1,12 @@
 <?php 
-namespace HummingBird\Module\Humage;
+namespace Hummingbird\Module\Humage;
 
 class Test {
     protected $categoryInterface;
     protected $array;
     protected $text;
     public function __construct(
-        \HummingBird\Module\Api\CategoryInterfaceRepo $categoryInterface,
+        \Hummingbird\Module\Api\CategoryInterface $categoryInterface,
         array $array=[],
         $text
     )

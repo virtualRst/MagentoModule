@@ -1,10 +1,10 @@
 <?php
-namespace HummingBird\Module\Controller\Humage;
+namespace Hummingbird\Module\Controller\Humage;
 
 class Test{
     protected $hummageTest;
     public function __construct(
-        \HummingBird\Module\Humage\Test $hummageTest
+        \Hummingbird\Module\Humage\Test $hummageTest
     ){
         $this->hummageTest=$hummageTest;
     }

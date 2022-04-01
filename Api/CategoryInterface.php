@@ -1,7 +1,7 @@
 <?php
- namespace HummingBird\Module\Api;
+ namespace Hummingbird\Module\Api;
  
- interface CategoryInterfaceRepo extends \Magento\Framework\Api\CustomAttributesDataInterface
+ interface CategoryInterface extends \Magento\Framework\Api\CustomAttributesDataInterface
  {
      const KEY_PARENT_ID = 'parent_id';
      const KEY_NAME = 'name';
@@ -74,8 +74,6 @@
      public function getIncludeInMenu();
  
      public function setIncludeInMenu($includeInMenu);
- 
-     public function getExtensionAttributes();
- 
+  
      public function setExtensionAttributes(\Magento\Catalog\Api\Data\CategoryExtensionInterface $extensionAttributes);
  }
