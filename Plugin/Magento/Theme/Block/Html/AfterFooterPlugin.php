@@ -23,8 +23,4 @@ public function afterGetCopyright(\Magento\Theme\Block\Html\Footer $subject, $re
 {
 return 'Customized copyright!';
 }
-public function afterGetWelcome(\Magento\Theme\Block\Html\Header $subject, $result)
-{
-return $result.' abc';
-}
 }
