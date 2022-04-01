@@ -8,6 +8,7 @@ namespace Hummingbird\Module\Plugin;
 /**
 * Class AfterPricePlugin
 */
+
 class AfterPricePlugin
 {
 /**
@@ -17,8 +18,8 @@ class AfterPricePlugin
 */
 public function afterGetName(\Magento\Catalog\Model\Product $subject, $result)
 {
-
-    if($result<60){
+    $price=$subject->getPrice();
+    if($price<60){
         return $result.' SALE';
     }
     return $result;
