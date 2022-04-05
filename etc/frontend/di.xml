@@ -11,4 +11,10 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Catalog\Controller\Product">
+        <plugin name="product-view-controller-plugin" type="Hummingbird\Module\Plugin\Magento\Catalog\Controller\Product\View" sortOrder="5" disabled="false" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\View\Description">
+        <plugin name="product-view-description-plugin" type="Hummingbird\Module\Plugin\Magento\Catalog\Block\Product\View\Description" />
+    </type>
 </config>
