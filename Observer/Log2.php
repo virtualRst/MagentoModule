@@ -18,6 +18,8 @@ private $_logger;
 * @var \Magento\Framework\App\RequestInterface
 */
 private $_request;
+
+private $requestValidator;
 /**
 * Log constructor.
 * @param \Psr\Log\LoggerInterface $logger
@@ -35,10 +37,11 @@ $this->_request = $request;
 */
 public function execute(\Magento\Framework\Event\Observer $observer)
 {
-    $product = $observer->getProduct();
-    $originalName = $product->getName();
-    $modifiedName = $originalName . ' - Modified by Magento 2 Events and Observers';
-    $product->setName($modifiedName);
-    $this->_logger->info($modifiedName);
+    $data=$observer->getEvent()->getData('response');
+    $data2=$data->getBody();
+    $small=substr($data2,5);
+    $this->_logger->info($small);
+
+
 }
 }
