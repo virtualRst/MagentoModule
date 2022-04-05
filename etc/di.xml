@@ -22,16 +22,14 @@
     <type name="Magento\Theme\Block\Html\Breadcrumbs">
         <plugin name="beforeBreadcrumbsPlugin" type="Hummingbird\Module\Plugin\Magento\Theme\Block\Html\BeforeBreadcrumbsPlugin" sortOrder="4" disabled="false" />
     </type>
-    <type name="Magento\Framework\App\RouterList">
+    <type name="Magento\Framework\App\Router\NoRouteHandlerList">
         <arguments>
-            <argument name="routerList" xsi:type="array">
-                <item name="routerdash" xsi:type="array">
-                    <item name="class" xsi:type="string">Unit2\RouterDash\Controller\Router</item>
-                    <item name="disable" xsi:type="boolean">false</item>
-                    <item name="sortOrder" xsi:type="string">70</item>
+            <argument name="handlerClassesList" xsi:type="array">
+                <item name="default" xsi:type="array">
+                    <item name="class" xsi:type="string">Hummingbird\Module\Controller\RouteHandler</item>
+                    <item name="sortOrder" xsi:type="string">9</item>
                 </item>
             </argument>
         </arguments>
     </type>
-    
 </config>
