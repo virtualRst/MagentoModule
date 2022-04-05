@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Hummingbird\Module\Api\CategoryInterface" type="Magento\Catalog\Api\Data\CategoryInterface" />
+    <preference for="Magento\Framework\App\FrontController" type="Hummingbird\Module\Test\App\FrontController" />
     <type name="Hummingbird\Module\Api\CategoryInterface">
         <arguments>
             <argument name="text" xsi:type="string">Hello world!</argument>
@@ -21,17 +22,16 @@
     <type name="Magento\Theme\Block\Html\Breadcrumbs">
         <plugin name="beforeBreadcrumbsPlugin" type="Hummingbird\Module\Plugin\Magento\Theme\Block\Html\BeforeBreadcrumbsPlugin" sortOrder="4" disabled="false" />
     </type>
-        <type name="Hummingbird\Module\Observer\Logger\Handler">
+    <type name="Magento\Framework\App\RouterList">
         <arguments>
-            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
-        </arguments>
-    </type>
-    <type name="Hummingbird\Module\Observer\Logger\Logger">
-        <arguments>
-            <argument name="name" xsi:type="string">myLoggerName</argument>
-            <argument name="handlers"  xsi:type="array">
-                <item name="system" xsi:type="object">YourNamespace\YourModule\Logger\Handler</item>
+            <argument name="routerList" xsi:type="array">
+                <item name="routerdash" xsi:type="array">
+                    <item name="class" xsi:type="string">Unit2\RouterDash\Controller\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">70</item>
+                </item>
             </argument>
         </arguments>
     </type>
+    
 </config>
