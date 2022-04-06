@@ -8,7 +8,7 @@ class Test {
     public function __construct(
         \Hummingbird\Module\Api\CategoryInterface $categoryInterface,
         array $array=[],
-        $text
+        $text="hiii"
     )
     {
         $this->categoryInterface=$categoryInterface;

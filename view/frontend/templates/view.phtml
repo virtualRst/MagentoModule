@@ -1,0 +1,20 @@
+<?php /** @var Hummingbird\Module\Block\TableData $block */ ?>
+<?php $employees = $block->getCollection(); ?>
+<?php if (count($employees)) { ?>
+    <table border="2">
+        <tr>
+            <th><?= __("ID") ?></th>
+            <th><?= __("First Name") ?></th>
+            <th><?= __("Last Name") ?></th>
+            <th><?= __("Email Id") ?></th>
+        </tr>
+        <?php foreach ($employees as $employee): ?>
+            <tr>
+                <td><?= $employee->getId() ?>
+                <td><?= $employee->getFirstName() ?>
+                <td><?= $employee->getLastName() ?>
+                <td><?= $employee->getEmail() ?>
+            </tr>
+        <?php endforeach; ?>
+    </table> 
+<?php } ?> 

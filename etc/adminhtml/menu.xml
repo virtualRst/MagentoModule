@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hummingbird_Module::test" title="Module" translate="title" module="Hummingbird_Module" sortOrder="90" dependsOnModule="Hummingbird_Module" resource="Hummingbird_Module::test"/>
+        <add id="Hummingbird_Module::test2" title="News" translate="title" module="Hummingbird_Module" parent="Hummingbird_Module::test" sortOrder="50" dependsOnModule="Hummingbird_Module" resource="Hummingbird_Module::news"/>
+        <add id="Hummingbird_Module::test3" title="All News" translate="title" module="Hummingbird_Module" parent="Hummingbird_Module::test2" sortOrder="10" dependsOnModule="Hummingbird_Module" action="test/data" resource="Hummingbird_Module::news_allnews"/>
+        <add id="Hummingbird_Module::settings" title="Settings" translate="title" module="Hummingbird_Module" parent="Hummingbird_Module::test" sortOrder="60" dependsOnModule="Hummingbird_Module" resource="Hummingbird_Module::settings"/>
+        <add id="Hummingbird_Module::config" title="Configuration" translate="title" module="Hummingbird_Module" parent="Hummingbird_Module::settings" sortOrder="10" dependsOnModule="Hummingbird_Module" action="adminhtml/system_config/edit/section/module_test" resource="Hummingbird_Module::config"/>
+    </menu>
+</config>

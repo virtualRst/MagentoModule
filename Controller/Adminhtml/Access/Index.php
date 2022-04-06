@@ -14,7 +14,7 @@ class Index extends \Magento\Backend\App\Action
         $secret = $this->getRequest()->getParam('access');
         return isset($secret) && (int) $secret == 1;
     }
-    protected function _processUrlKeys()
+    public function _processUrlKeys()
     {
         return true;
     }
