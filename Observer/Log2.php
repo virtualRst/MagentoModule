@@ -39,7 +39,7 @@ public function execute(\Magento\Framework\Event\Observer $observer)
 {
     $data=$observer->getEvent()->getData('response');
     $data2=$data->getBody();
-    $small=substr($data2,5);
+    $small=substr($data2,0,100);
     $this->_logger->info($small);
 
 
